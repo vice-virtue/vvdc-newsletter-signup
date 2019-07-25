@@ -6,142 +6,40 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Washington Vice & Virtue: Newsletter Signup</title>
 
-	<style>
-		:root {
-			--crimson-justice: #990034;
-			--victory-blue: #003768;
-		}
+	<!-- styles -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/assets/styles/app.css">
 
-		/* Box sizing rules */
-		* {
-			box-sizing: border-box;
-		}
-
-		*:before,
-		*:after {
-			box-sizing: inherit;
-		}
-
-		/* Remove margin and padding from elements */
-		body,
-		h1,
-		h2,
-		h3,
-		h4,
-		p,
-		ul,
-		ol,
-		li,
-		dd,
-		figure,
-		figcaption,
-		dl,
-		dd,
-		dt {
-			margin: 0px;
-			padding: 0px;
-		}
-
-		body {
-			/* Hide persistent scrollbar in IE (10/11) and Edge */
-			-ms-overflow-style: -ms-autohiding-scrollbar;
-
-			/* Anchor links will transition rather than skip */
-			scroll-behavior: smooth;
-
-			/* Reset font size to 1rem, in case it has a pixel value */
-			font-size: 1rem;
-
-			min-height: 100vh;
-		}
-
-		/* Remove list styles on ul, ol elements with a class attribute */
-		ul[class],
-		ol[class] {
-			list-style: none;
-		}
-
-		/* A elements that don't have a class get default styles */
-		a:not([class]) {
-			text-decoration: underline;
-			text-decoration-skip-ink: auto;
-			cursor: pointer;
-		}
-
-		/* Turn off the recent search in WebKit. */
-		::-webkit-search-decoration {
-			display: none;
-		}
-
-		/* Normalise form field line-height in WebKit */
-		input::-webkit-input-placeholder,
-		textarea::-webkit-input-placeholder,
-		select::-webkit-input-placeholder {
-			line-height: normal;
-		}
-
-		/* Make a search box appear like a text box */
-		input[type='search'] {
-			-webkit-appearance: textfield;
-		}
-
-		/* Make images responsive */
-		img {
-			max-width: 100%;
-		}
-
-		/* Remove _all_ animations and transitions for people that prefer not to see them */
-		@media (prefers-reduced-motion: reduce) {
-			* {
-				-webkit-animation: none !important;
-				animation: none !important;
-				transition: none !important;
-				scroll-behavior: auto !important;
-			}
-		}
-
-		body {
-			background-color: white;
-			display: grid;
-			grid-template-columns: 1fr;
-			border: solid 16px var(--victory-blue);
-			align-items: center;
-			padding: 16px;
-		}
-
-		.site-logo {
-			max-width: 120px;
-			margin: auto;
-		}
-
-		@media screen and (min-width: 640px) {
-			body {
-				grid-template-columns: 1fr 2fr 1fr;
-			}
-
-			header,
-			main,
-			footer {
-				grid-column: 2;
-			}
-		}
-	</style>
+	<!-- scripts -->
+	<script src="https://kit.fontawesome.com/9b37c97180.js"></script>
 </head>
 
 <body class="site-grid">
-	<header>
+	<header class="site-header">
 		<div class="site-logo">
-			<img src="assets/media/logo.svg" alt="">
+			<a href="/"><img src="assets/media/logo.svg" alt=""></a>
 		</div>
 	</header>
-	<main>
-		<section class="vvdc-email-form">
-			<iframe scrolling="no" style="width:100%!important;height:480px;border:none !important;"
-				src="https://buttondown.email/washvicevirtue?as_embed=true"></iframe>
+	<main class="site-content">
+		<section class="vvdc-form">
+			<div class="content">
+				<h1 class="header">Sign up to receive updates from Washington Vice & Virtue</h1>
+			</div>
+			<form action="https://buttondown.email/api/emails/embed-subscribe/washvicevirtue" method="post"
+				target="popupwindow" onsubmit="window.open('https://buttondown.email/washvicevirtue', 'popupwindow')"
+				class="embeddable-buttondown-form vvdc-email-form">
+				<label for="bd-email">Enter your email</label>
+				<input type="email" name="email" id="bd-email" class="">
+				<input type="hidden" value="1" name="embed"></input>
+				<input type="submit" value="Subscribe" class="button button--submit"></input>
+				<div class="buttondown-branding">
+					<a href="https://buttondown.email" target="_blank">Powered by Buttondown.</a>
+				</div>
+			</form>
 		</section>
 	</main>
-	<footer>
-		footer
+	<footer class="site-footer">
+		<p>&copy; 2019 Washington Vice & Virtue.</p>
 	</footer>
 </body>
 

@@ -1,0 +1,230 @@
+:root {
+	--crimson-justice: #990034;
+	--victory-blue: #003768;
+	--white-virtue: #ffffff;
+	--arctic-frontier: #0b6999;
+	--capitol-slate: #828080;
+	--mountain-terra: #682600;
+}
+
+/* Box sizing rules */
+* {
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* Remove margin and padding from elements */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+dd,
+figure,
+figcaption,
+dl,
+dd,
+dt {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	/* Hide persistent scrollbar in IE (10/11) and Edge */
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+
+	/* Anchor links will transition rather than skip */
+	scroll-behavior: smooth;
+
+	/* Reset font size to 1rem, in case it has a pixel value */
+	font-size: 1rem;
+
+	min-height: 100vh;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+	list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration: underline;
+	text-decoration-skip-ink: auto;
+	cursor: pointer;
+}
+
+/* Turn off the recent search in WebKit. */
+::-webkit-search-decoration {
+	display: none;
+}
+
+/* Normalise form field line-height in WebKit */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+	line-height: normal;
+}
+
+/* Make a search box appear like a text box */
+input[type='search'] {
+	-webkit-appearance: textfield;
+}
+
+/* Make images responsive */
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/* Remove _all_ animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		-webkit-animation: none !important;
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+body {
+	align-items: center;
+	background-color: var(--crimson-justice);
+	background-image: url('/assets/media/bg-vvdc-newsletter.jpg');
+	background-size: cover;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	border: solid 16px var(--white-virtue);
+	display: grid;
+	font-family: "Roboto", sans-serif;
+	grid-template-columns: 1fr;
+	padding: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+label,
+input,
+a {
+	display: block;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+.site-logo {
+	margin: auto;
+	max-width: 144px;
+}
+
+.vvdc-form {
+	background-color: var(--white-virtue);
+	margin: auto;
+	max-width: 40ch;
+	padding: 16px;
+}
+
+.vvdc-form form {
+	margin-top: 40px;
+}
+
+.vvdc-form label,
+.vvdc-form input {
+	color: var(--capitol-slate);
+}
+
+.vvdc-form input {
+	font-size: inherit;
+	font-weight: 400;
+	margin: 8px 0;
+	padding: 16px;
+}
+
+.vvdc-form #bd-email {
+	border: solid 4px var(--crimson-justice);
+	width: 100%;
+}
+
+.vvdc-form .button.button--submit {
+	background-color: var(--victory-blue);
+	border: none !important;
+	color: var(--white-virtue);
+	display: block;
+	font-weight: 900;
+	width: 100%;
+}
+
+.vvdc-form .buttondown-branding a {
+	color: var(--capitol-slate);
+	font-size: 0.8rem;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.content .header {
+	color: var(--arctic-frontier);
+	font-size: 1.2rem;
+	margin-bottom: 8px;
+}
+
+.content .text {
+	color: var(--capitol-slate);
+	font-size: 1rem;
+	margin-bottom: 40px;
+}
+
+.content i {
+	color: var(--arctic-frontier);
+}
+
+.content a {
+	font-size: 1.2rem;
+	color: var(--mountain-terra);
+}
+
+footer {
+	color: var(--white-virtue);
+	font-size: 1rem;
+	font-weight: 900;
+	text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+	.site-grid {
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: 1fr 2fr 1fr;
+		font-size: 1.2rem;
+	}
+
+	.site-header,
+	.site-content,
+	.site-footer {
+		grid-column: 2;
+	}
+
+	.vvdc-form {
+		padding: 32px;
+	}
+
+	.content .header {
+		font-size: 1.4rem;
+	}
+	
+	.content .text {
+		font-size: 1.2rem;
+	}
+}
