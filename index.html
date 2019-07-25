@@ -102,35 +102,46 @@
 
 		body {
 			background-color: white;
+			display: grid;
+			grid-template-columns: 1fr;
+			border: solid 16px var(--victory-blue);
+			align-items: center;
+			padding: 16px;
 		}
 
-		iframe .app-container {
-			background-color: white !important;
+		.site-logo {
+			max-width: 120px;
+			margin: auto;
+		}
+
+		@media screen and (min-width: 640px) {
+			body {
+				grid-template-columns: 1fr 2fr 1fr;
+			}
+
+			header,
+			main,
+			footer {
+				grid-column: 2;
+			}
 		}
 	</style>
 </head>
 
-<body>
+<body class="site-grid">
 	<header>
-
+		<div class="site-logo">
+			<img src="assets/media/logo.svg" alt="">
+		</div>
 	</header>
 	<main>
-q
 		<section class="vvdc-email-form">
-			<form action="https://buttondown.email/api/emails/embed-subscribe/washvicevirtue" method="post"
-				target="popupwindow" onsubmit="window.open('https://buttondown.email/washvicevirtue', 'popupwindow')"
-				class="embeddable-buttondown-form">
-				<h1>Subscribe to receive updates from Washington Vice & Virtue:</h1>
-				<label for="bd-email">Enter your email</label>
-				<input type="email" name="email" id="bd-email">
-				<input type="hidden" value="1" name="embed"></input>
-				<input type="submit" value="Subscribe"></input>
-				<p><a href="https://buttondown.email" target="_blank" rel="noopener">Powered by Buttondown.</a></p>
-			</form>
+			<iframe scrolling="no" style="width:100%!important;height:480px;border:none !important;"
+				src="https://buttondown.email/washvicevirtue?as_embed=true"></iframe>
 		</section>
 	</main>
 	<footer>
-
+		footer
 	</footer>
 </body>
 
