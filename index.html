@@ -5,6 +5,109 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Washington Vice & Virtue: Newsletter Signup</title>
+
+	<style>
+		:root {
+			--crimson-justice: #990034;
+			--victory-blue: #003768;
+		}
+
+		/* Box sizing rules */
+		* {
+			box-sizing: border-box;
+		}
+
+		*:before,
+		*:after {
+			box-sizing: inherit;
+		}
+
+		/* Remove margin and padding from elements */
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		p,
+		ul,
+		ol,
+		li,
+		dd,
+		figure,
+		figcaption,
+		dl,
+		dd,
+		dt {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		body {
+			/* Hide persistent scrollbar in IE (10/11) and Edge */
+			-ms-overflow-style: -ms-autohiding-scrollbar;
+
+			/* Anchor links will transition rather than skip */
+			scroll-behavior: smooth;
+
+			/* Reset font size to 1rem, in case it has a pixel value */
+			font-size: 1rem;
+
+			min-height: 100vh;
+		}
+
+		/* Remove list styles on ul, ol elements with a class attribute */
+		ul[class],
+		ol[class] {
+			list-style: none;
+		}
+
+		/* A elements that don't have a class get default styles */
+		a:not([class]) {
+			text-decoration: underline;
+			text-decoration-skip-ink: auto;
+			cursor: pointer;
+		}
+
+		/* Turn off the recent search in WebKit. */
+		::-webkit-search-decoration {
+			display: none;
+		}
+
+		/* Normalise form field line-height in WebKit */
+		input::-webkit-input-placeholder,
+		textarea::-webkit-input-placeholder,
+		select::-webkit-input-placeholder {
+			line-height: normal;
+		}
+
+		/* Make a search box appear like a text box */
+		input[type='search'] {
+			-webkit-appearance: textfield;
+		}
+
+		/* Make images responsive */
+		img {
+			max-width: 100%;
+		}
+
+		/* Remove _all_ animations and transitions for people that prefer not to see them */
+		@media (prefers-reduced-motion: reduce) {
+			* {
+				-webkit-animation: none !important;
+				animation: none !important;
+				transition: none !important;
+				scroll-behavior: auto !important;
+			}
+		}
+
+		body {
+			background-color: white;
+		}
+
+		iframe .app-container {
+			background-color: white !important;
+		}
+	</style>
 </head>
 
 <body>
@@ -12,8 +115,19 @@
 
 	</header>
 	<main>
-		<iframe scrolling="no" style="width:100%!important;height:220px;border:1px #ccc solid !important"
-			src="https://buttondown.email/washvicevirtue?as_embed=true"></iframe>
+q
+		<section class="vvdc-email-form">
+			<form action="https://buttondown.email/api/emails/embed-subscribe/washvicevirtue" method="post"
+				target="popupwindow" onsubmit="window.open('https://buttondown.email/washvicevirtue', 'popupwindow')"
+				class="embeddable-buttondown-form">
+				<h1>Subscribe to receive updates from Washington Vice & Virtue:</h1>
+				<label for="bd-email">Enter your email</label>
+				<input type="email" name="email" id="bd-email">
+				<input type="hidden" value="1" name="embed"></input>
+				<input type="submit" value="Subscribe"></input>
+				<p><a href="https://buttondown.email" target="_blank" rel="noopener">Powered by Buttondown.</a></p>
+			</form>
+		</section>
 	</main>
 	<footer>
 
